@@ -9,7 +9,15 @@ export interface Props extends Omit<astroHTML.JSX.SVGAttributes, "set:html"> {
 
 const { src, ...attributeOverrides } = Astro.props as Props;
 
-const doc = parse((await src).default);
+const SVG_NOT_FOUND = "Could not find an SVG at the provided `src`";
+
+const svgSource = (await src).default;
+
+if (!svgSource) {
+  throw SVG_NOT_FOUND;
+}
+
+const doc = parse(svgSource);
 // override the svg attributes with ones passed to `Svg`
 Object.assign(doc.children[0].attributes, attributeOverrides);
 const contents = await render(doc);
