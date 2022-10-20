@@ -7,6 +7,7 @@ describe("overrideSvgAtrributes", () => {
   it("should return the same output if no overrides are given", async () => {
     expect(await overrideSvgAttributes("<svg></svg>")).toBe("<svg></svg>");
     expect(await overrideSvgAttributes("<svg>")).toBe("<svg></svg>");
+    expect(await overrideSvgAttributes("<SVG>")).toBe("<SVG></SVG>");
   });
 
   it("should strip leading and following whitespace", async () => {

@@ -24,7 +24,7 @@ if (!svgSource) {
   throw new Error(SVG_NOT_FOUND);
 }
 
-if (!svgSource.trim().startsWith("<svg")) {
+if (!svgSource.trimStart().toLowerCase().startsWith("<svg")) {
   throw new Error(`${SVG_NOT_FOUND}, provided: ${svgSource.slice(0, 23)}
   maybe you need to add '?raw' to the end of the import?`);
 }
