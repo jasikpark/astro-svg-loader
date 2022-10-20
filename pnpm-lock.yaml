@@ -13,6 +13,7 @@ specifiers:
 
 dependencies:
   tiny-invariant: 1.3.1
+  ultrahtml: 1.0.0-next.3
 
 devDependencies:
   '@ianvs/prettier-plugin-sort-imports': 3.4.2_prettier@2.7.1
@@ -21,7 +22,6 @@ devDependencies:
   fast-check: 3.3.0
   prettier: 2.7.1
   prettier-plugin-astro: 0.6.0
-  ultrahtml: 1.0.0-next.3
   vitest: 0.24.3_@vitest+ui@0.24.3
 
 packages:
@@ -3445,7 +3445,7 @@ packages:
 
   /ultrahtml/1.0.0-next.3:
     resolution: {integrity: sha512-juApolh5bAoduz2rR9FhsL/mQil67+QrHpncg1a6Weyaopig91qXFRs284fXgf3qR011gIvvTznbldXUc3Wr5Q==}
-    dev: true
+    dev: false
 
   /unherit/3.0.0:
     resolution: {integrity: sha512-UmvIQZGEc9qdLIQ8mv8/61n6PiMgfbOoASPKHpCvII5srShCQSa6jSjBjlZOR4bxt2XnT6uo6csmPKRi+zQ0Jg==}
