@@ -1,6 +1,8 @@
 {
   "name": "@jasikpark/astro-svg-loader",
-  "private": true,
+  "repository": {
+    "url": "https://github.com/jasikpark/astro-svg-loader"
+  },
   "version": "0.0.1",
   "type": "module",
   "exports": {
