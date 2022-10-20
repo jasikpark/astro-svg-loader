@@ -12,8 +12,12 @@ export async function overrideSvgAttributes(
   svgSource: string,
   attributeOverrides: SVGAttributes = {}
 ): Promise<string> {
-  assert(svgSource, EMPTY_STRING_ERR);
-  assert(svgSource.trimStart().startsWith("<svg"), MUST_START_WITH_SVG);
+  if (!svgSource) {
+    throw new Error(EMPTY_STRING_ERR);
+  }
+  if (!svgSource.trimStart().startsWith("<svg")) {
+    throw new Error(MUST_START_WITH_SVG);
+  }
 
   const output = await transform(svgSource, [
     swap({

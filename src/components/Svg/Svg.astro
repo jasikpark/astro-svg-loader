@@ -15,13 +15,17 @@ const SVG_NOT_FOUND = "Could not find an SVG at the provided `src`";
 const svgImport = await src;
 
 if (!svgImport) {
-  throw SVG_NOT_FOUND;
+  throw new Error(SVG_NOT_FOUND);
 }
 
 const svgSource = svgImport.default;
 
 if (!svgSource) {
-  throw SVG_NOT_FOUND;
+  throw new Error(SVG_NOT_FOUND);
+}
+
+if (!svgSource.trim().startsWith("<svg")) {
+  throw new Error(`${SVG_NOT_FOUND}, provided: ${svgSource.slice(0, 23)}`);
 }
 
 const contents = overrideSvgAttributes(svgSource, attributeOverrides);

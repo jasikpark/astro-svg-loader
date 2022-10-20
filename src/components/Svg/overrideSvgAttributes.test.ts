@@ -42,7 +42,7 @@ describe("overrideSvgAtrributes", () => {
     await expect(
       async () => await overrideSvgAttributes("")
     ).rejects.toThrowErrorMatchingInlineSnapshot(
-      '"Invariant failed: `svgSource` must have content"'
+      '"`svgSource` must have content"'
     );
   });
 
@@ -50,7 +50,7 @@ describe("overrideSvgAtrributes", () => {
     await expect(
       async () => await overrideSvgAttributes("<div></div>")
     ).rejects.toThrowErrorMatchingInlineSnapshot(
-      '"Invariant failed: `svgSource` must begin with `<svg`"'
+      '"`svgSource` must begin with `<svg`"'
     );
   });
 
@@ -100,7 +100,6 @@ describe("overrideSvgAtrributes", () => {
           );
           ctx.log(transformedSource);
           expect(transformedSource).toBeTruthy();
-          console.log(svgSource, transformedSource);
           // every truthy override should exist in the transformed source
           Object.entries(overrides)
             .filter(([, value]) => !!value)
