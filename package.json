@@ -1,0 +1,41 @@
+{
+  "name": "@jasikpark/astro-svg-loader",
+  "private": true,
+  "version": "0.0.1",
+  "type": "module",
+  "exports": {
+    ".": "./index.ts"
+  },
+  "files": [
+    "src",
+    "index.ts"
+  ],
+  "keywords": [
+    "astro-component",
+    "svg",
+    "svg-loader"
+  ],
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "format": "prettier -w --plugin-search-dir=. ."
+  },
+  "devDependencies": {
+    "@ianvs/prettier-plugin-sort-imports": "^3.4.2",
+    "astro": "^1.5.2",
+    "prettier": "^2.7.1",
+    "prettier-plugin-astro": "^0.6.0"
+  },
+  "peerDependencies": {
+    "astro": "^1.5.2"
+  },
+  "engines": {
+    "node": "^14.18.0 || >=16.12.0",
+    "pnpm": ">=7.9.5"
+  },
+  "packageManager": "pnpm@7.13.6",
+  "dependencies": {
+    "ultrahtml": "^0.4.0"
+  }
+}
