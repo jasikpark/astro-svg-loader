@@ -11,7 +11,13 @@ const { src, ...attributeOverrides } = Astro.props as Props;
 
 const SVG_NOT_FOUND = "Could not find an SVG at the provided `src`";
 
-const svgSource = (await src).default;
+const svgImport = await src;
+
+if (!svgImport) {
+  throw SVG_NOT_FOUND;
+}
+
+const svgSource = svgImport.default;
 
 if (!svgSource) {
   throw SVG_NOT_FOUND;
