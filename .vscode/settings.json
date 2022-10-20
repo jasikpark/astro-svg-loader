@@ -2,5 +2,6 @@
   "prettier.documentSelectors": ["**/*.astro"],
   "[astro]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
-  }
+  },
+  "languageToolLinter.languageTool.ignoredWordsInWorkspace": ["astro", "vite"]
 }

@@ -1,0 +1,18 @@
+---
+import { parse, render } from "ultrahtml";
+
+// accepts SVG attributes which will override the ones in the original SVG
+export interface Props extends Omit<astroHTML.JSX.SVGAttributes, "set:html"> {
+  /**  pass an `import("*.svg?raw")` to `Svg` for the svg file to use */
+  src: Promise<typeof import("*.svg?raw")>;
+}
+
+const { src, ...attributeOverrides } = Astro.props as Props;
+
+const doc = parse((await src).default);
+// override the svg attributes with ones passed to `Svg`
+Object.assign(doc.children[0].attributes, attributeOverrides);
+const contents = await render(doc);
+---
+
+<Fragment set:html={contents} />
