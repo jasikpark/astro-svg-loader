@@ -25,7 +25,8 @@ if (!svgSource) {
 }
 
 if (!svgSource.trim().startsWith("<svg")) {
-  throw new Error(`${SVG_NOT_FOUND}, provided: ${svgSource.slice(0, 23)}`);
+  throw new Error(`${SVG_NOT_FOUND}, provided: ${svgSource.slice(0, 23)}
+  maybe you need to add '?raw' to the end of the import?`);
 }
 
 const contents = overrideSvgAttributes(svgSource, attributeOverrides);
