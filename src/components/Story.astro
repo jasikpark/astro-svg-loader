@@ -1,0 +1,33 @@
+---
+import { Code } from "astro/components";
+
+type Props = {
+  title: string;
+  src: Promise<typeof import("*.astro?raw")>;
+};
+---
+
+<div>
+  <p>
+    {Astro.props.title}:
+  </p>
+  <details class="Story_codeWrapper">
+    <summary>Show component source</summary>
+    <Code code={(await Astro.props.src).default} lang="astro" />
+  </details>
+
+  <div>
+    <slot />
+  </div>
+</div>
+
+<style>
+  .Story_codeWrapper {
+  }
+
+  .Story_codeWrapper > :global(pre) {
+    text-align: left;
+    padding: 2rem;
+    border-radius: 2rem;
+  }
+</style>

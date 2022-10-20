@@ -1,0 +1,51 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Story from "../components/Story.astro";
+import Svg from "../components/Svg.astro";
+---
+
+<Layout title="Astro">
+  <h1>Astro SVG Loader</h1>
+
+  <Story
+    title="Svg / Override height and width"
+    src={import("../components/Svg.astro?raw")}
+  >
+    <Svg
+      height="200"
+      width="1242"
+      src={import("../assets/astro-full-logo-light.svg?raw")}
+    />
+  </Story>
+
+  <Story
+    title="Svg / Add accessible label & aria-hide the svg"
+    src={import("../components/Svg.astro?raw")}
+  >
+    <div>
+      <span class="sr-only">Astro</span>
+      <Svg
+        aria-hidden={true}
+        height="200"
+        width="1242"
+        src={import("../assets/astro-full-logo-light.svg?raw")}
+      />
+    </div>
+  </Story>
+
+  <Story
+    title="Svg / Add an aria-label"
+    src={import("../components/Svg.astro?raw")}
+  >
+    <aside>
+      We recommend the above pattern over <code>aria-label</code> for screenreader
+      support reasons
+    </aside>
+    <Svg
+      aria-label="Astro"
+      height="200"
+      width="1242"
+      src={import("../assets/astro-full-logo-light.svg?raw")}
+    />
+  </Story>
+</Layout>
