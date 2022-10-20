@@ -24,8 +24,12 @@ if (!svgSource) {
 }
 
 const doc = parse(svgSource);
-// override the svg attributes with ones passed to `Svg`
-Object.assign(doc.children[0].attributes, attributeOverrides);
+
+if (attributeOverrides) {
+  // override the svg attributes with ones passed to `Svg`
+  Object.assign(doc.children[0].attributes, attributeOverrides);
+}
+
 const contents = await render(doc);
 ---
 
