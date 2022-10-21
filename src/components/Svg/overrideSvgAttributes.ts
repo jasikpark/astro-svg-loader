@@ -3,7 +3,6 @@
 import type { SVGAttributes } from "../../types";
 import { html, transform } from "ultrahtml";
 import swap from "ultrahtml/transformers/swap";
-import assert from "tiny-invariant";
 
 const EMPTY_STRING_ERR = "`svgSource` must have content";
 const MUST_START_WITH_SVG = "`svgSource` must begin with `<svg`";
@@ -21,6 +20,13 @@ export async function overrideSvgAttributes(
 
   const output = await transform(svgSource, [
     swap({
+      SVG: "svg",
+      svG: "svg",
+      sVg: "svg",
+      sVG: "svg",
+      Svg: "svg",
+      SvG: "svg",
+      SVg: "svg",
       svg: (originalProps = {}, children) => {
         const mergedProps = Object.fromEntries(
           Object.entries({
