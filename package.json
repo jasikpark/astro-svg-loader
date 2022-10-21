@@ -22,6 +22,7 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
+    "preinstall": "npx only-allow pnpm",
     "format": "prettier -w --plugin-search-dir=. .",
     "test": "vitest --run",
     "test:watch": "vitest",
