@@ -2,7 +2,7 @@ import type { SVGAttributes } from "../../types.js";
 import { overrideSvgAttributes } from "./overrideSvgAttributes.js";
 import fc from "fast-check";
 import { parse } from "ultrahtml";
-import { bench, describe, expect, it } from "vitest";
+import { describe, expect, it } from "vitest";
 
 const whitespaceArb = fc.stringOf(fc.constant(" "));
 
