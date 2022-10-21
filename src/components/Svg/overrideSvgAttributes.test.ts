@@ -4,11 +4,23 @@ import fc from "fast-check";
 import { parse } from "ultrahtml";
 import { bench, describe, expect, it } from "vitest";
 
+const whitespaceArb = fc.stringOf(fc.constant(" "));
+
 const svgArbitrary = fc
   .record({
-    start: fc.mixedCase(fc.constantFrom("<svg>")),
+    start: fc
+      .record({
+        whitespace: whitespaceArb,
+        svg: fc.mixedCase(fc.constant("<svg>")),
+      })
+      .map(({ whitespace, svg }) => `${whitespace}${svg}`),
     middle: fc.fullUnicodeString(),
-    end: fc.mixedCase(fc.constantFrom("</svg>")),
+    end: fc
+      .record({
+        whitespace: whitespaceArb,
+        svg: fc.mixedCase(fc.constant("</svg>")),
+      })
+      .map(({ whitespace, svg }) => `${whitespace}${svg}`),
   })
   .map(({ start, middle, end }) => `${start}${middle}${end}`);
 
