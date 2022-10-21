@@ -2,7 +2,7 @@ import type { SVGAttributes } from "../../types.js";
 import { overrideSvgAttributes } from "./overrideSvgAttributes.js";
 import fc from "fast-check";
 import { parse } from "ultrahtml";
-import { bench, describe, expect, it } from "vitest";
+import { bench, describe, expect } from "vitest";
 
 const svgArbitrary = fc
   .record({
@@ -23,19 +23,19 @@ const SVGAttributesArbitrary = fc.record<SVGAttributes>({
 });
 
 describe("overrideSvgAtrributes", () => {
-  it("should return the same output if no overrides are given", async () => {
+  bench("should return the same output if no overrides are given", async () => {
     expect(await overrideSvgAttributes("<svg></svg>")).toBe("<svg></svg>");
     expect(await overrideSvgAttributes("<svg>")).toBe("<svg></svg>");
     expect(await overrideSvgAttributes("<SVG>")).toBe("<SVG></SVG>");
   });
 
-  it("should strip leading and following whitespace", async () => {
+  bench("should strip leading and following whitespace", async () => {
     expect(await overrideSvgAttributes("  <svg>")).toBe("<svg></svg>");
     expect(await overrideSvgAttributes("  <svg></svg>   ")).toBe("<svg></svg>");
     expect(await overrideSvgAttributes("    <svg></svg>")).toBe("<svg></svg>");
   });
 
-  it("should override height and width", async () => {
+  bench("should override height and width", async () => {
     expect(
       await overrideSvgAttributes(`<svg height="100" width=40></svg>`, {
         height: 400,
@@ -44,7 +44,7 @@ describe("overrideSvgAtrributes", () => {
     ).toBe('<svg height="400" width="20"></svg>');
   });
 
-  it("should not include null and undefined properties", async () => {
+  bench("should not include null and undefined properties", async () => {
     expect(
       await overrideSvgAttributes(`<svg></svg>`, {
         height: null,
@@ -62,7 +62,7 @@ describe("overrideSvgAtrributes", () => {
     ).toBe(`<svg aria-hidden="true"></svg>`);
   });
 
-  it("should throw an error if `svgSource` is empty", async () => {
+  bench("should throw an error if `svgSource` is empty", async () => {
     await expect(
       async () => await overrideSvgAttributes("")
     ).rejects.toThrowErrorMatchingInlineSnapshot(
@@ -70,20 +70,23 @@ describe("overrideSvgAtrributes", () => {
     );
   });
 
-  it("should throw an error if svgSource doesn't start with `<svg`", async () => {
-    await expect(
-      async () => await overrideSvgAttributes("<div></div>")
-    ).rejects.toThrowErrorMatchingInlineSnapshot(
-      '"`svgSource` must begin with `<svg`"'
-    );
-    await expect(
-      async () => await overrideSvgAttributes("/images/www/hero.svg")
-    ).rejects.toThrowErrorMatchingInlineSnapshot(
-      '"`svgSource` must begin with `<svg`"'
-    );
-  });
+  bench(
+    "should throw an error if svgSource doesn't start with `<svg`",
+    async () => {
+      await expect(
+        async () => await overrideSvgAttributes("<div></div>")
+      ).rejects.toThrowErrorMatchingInlineSnapshot(
+        '"`svgSource` must begin with `<svg`"'
+      );
+      await expect(
+        async () => await overrideSvgAttributes("/images/www/hero.svg")
+      ).rejects.toThrowErrorMatchingInlineSnapshot(
+        '"`svgSource` must begin with `<svg`"'
+      );
+    }
+  );
 
-  it("should add properties successfully", async () => {
+  bench("should add properties successfully", async () => {
     expect(
       await overrideSvgAttributes("<SVG></SVG>", {
         height: null,
@@ -123,7 +126,7 @@ describe("overrideSvgAtrributes", () => {
 });
 
 describe("parse()", () => {
-  it("should never throw", async () => {
+  bench("should never throw", async () => {
     await fc.assert(
       fc.asyncProperty(fc.fullUnicodeString(), async (input) => {
         expect(await parse(input)).toBeTruthy();

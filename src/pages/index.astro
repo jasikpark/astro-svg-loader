@@ -9,7 +9,7 @@ import Layout from "../layouts/Layout.astro";
 
   <Story
     title="Svg / Override height and width"
-    src={import("../components/Svg.astro?raw")}
+    src={import("../components/Svg/Svg.astro?raw")}
   >
     <Svg
       height="200"
@@ -20,7 +20,7 @@ import Layout from "../layouts/Layout.astro";
 
   <Story
     title="Svg / Add accessible label & aria-hide the svg"
-    src={import("../components/Svg.astro?raw")}
+    src={import("../components/Svg/Svg.astro?raw")}
   >
     <div>
       <span class="sr-only">Astro</span>
@@ -35,7 +35,7 @@ import Layout from "../layouts/Layout.astro";
 
   <Story
     title="Svg / Add an aria-label"
-    src={import("../components/Svg.astro?raw")}
+    src={import("../components/Svg/Svg.astro?raw")}
   >
     <aside>
       We recommend the above pattern over <code>aria-label</code> for screenreader

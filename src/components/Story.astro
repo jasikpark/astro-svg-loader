@@ -7,7 +7,7 @@ type Props = {
 };
 ---
 
-<div>
+<div class="Story">
   <p>
     {Astro.props.title}:
   </p>
@@ -22,7 +22,8 @@ type Props = {
 </div>
 
 <style>
-  .Story_codeWrapper {
+  .Story {
+    max-width: 100%;
   }
 
   .Story_codeWrapper > :global(pre) {

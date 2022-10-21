@@ -1,8 +1,7 @@
 /// <reference types="astro/astro-jsx" />
 
 import type { SVGAttributes } from "../../types";
-import { html, transform } from "ultrahtml";
-import swap from "ultrahtml/transformers/swap";
+import { DocumentNode, Node, parse, render } from "ultrahtml";
 
 const EMPTY_STRING_ERR = "`svgSource` must have content";
 const MUST_START_WITH_SVG = "`svgSource` must begin with `<svg`";
@@ -18,26 +17,23 @@ export async function overrideSvgAttributes(
     throw new Error(MUST_START_WITH_SVG);
   }
 
-  const output = await transform(svgSource, [
-    swap({
-      SVG: "svg",
-      svG: "svg",
-      sVg: "svg",
-      sVG: "svg",
-      Svg: "svg",
-      SvG: "svg",
-      SVg: "svg",
-      svg: (originalProps = {}, children) => {
-        const mergedProps = Object.fromEntries(
-          Object.entries({
-            ...originalProps,
-            ...attributeOverrides,
-          }).filter(([, value]) => !!value)
-        );
-        return html`<svg ...${mergedProps}>${children}</svg>`;
-      },
-    }),
-  ]);
+  const doc = parse(svgSource) as DocumentNode;
 
-  return output.trim();
+  const firstSVGNode = doc.children.find(
+    ({ type, name }: Node) => type === 1 && /svg/i.test(name)
+  );
+
+  const mergedAttributes = Object.fromEntries(
+    Object.entries({
+      ...firstSVGNode.attributes,
+      ...attributeOverrides,
+    }).filter(([, value]) => !!value)
+  );
+
+  const updatedSVG = {
+    ...firstSVGNode,
+    attributes: mergedAttributes,
+  };
+
+  return render(updatedSVG);
 }
