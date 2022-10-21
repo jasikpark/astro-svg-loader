@@ -57,7 +57,7 @@ describe("overrideSvgAtrributes", () => {
     ).toBe("<svg></svg>");
   });
 
-  it("should throw an error if no svg is passed", async () => {
+  it("should throw an error if `svgSource` is empty", async () => {
     await expect(
       async () => await overrideSvgAttributes("")
     ).rejects.toThrowErrorMatchingInlineSnapshot(
@@ -68,6 +68,11 @@ describe("overrideSvgAtrributes", () => {
   it("should throw an error if svgSource doesn't start with `<svg`", async () => {
     await expect(
       async () => await overrideSvgAttributes("<div></div>")
+    ).rejects.toThrowErrorMatchingInlineSnapshot(
+      '"`svgSource` must begin with `<svg`"'
+    );
+    await expect(
+      async () => await overrideSvgAttributes("/images/www/hero.svg")
     ).rejects.toThrowErrorMatchingInlineSnapshot(
       '"`svgSource` must begin with `<svg`"'
     );
