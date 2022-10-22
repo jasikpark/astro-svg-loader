@@ -7,11 +7,11 @@ specifiers:
   fast-check: ^3.3.0
   prettier: ^2.7.1
   prettier-plugin-astro: ^0.6.0
-  ultrahtml: 1.0.0-next.3
+  ultrahtml: 1.0.0-next.4
   vitest: ^0.24.3
 
 dependencies:
-  ultrahtml: 1.0.0-next.3
+  ultrahtml: 1.0.0-next.4
 
 devDependencies:
   '@ianvs/prettier-plugin-sort-imports': 3.4.2_prettier@2.7.1
@@ -3437,8 +3437,8 @@ packages:
     hasBin: true
     dev: true
 
-  /ultrahtml/1.0.0-next.3:
-    resolution: {integrity: sha512-juApolh5bAoduz2rR9FhsL/mQil67+QrHpncg1a6Weyaopig91qXFRs284fXgf3qR011gIvvTznbldXUc3Wr5Q==}
+  /ultrahtml/1.0.0-next.4:
+    resolution: {integrity: sha512-Y6lU3i9asEyzQfUHh5bhWiPDdR+vk+nta0XEouAi7gBKZ6PqUKVMNW693yYYBchDOBv0D22LqNz0puOpeM/7pQ==}
     dev: false
 
   /unherit/3.0.0:
