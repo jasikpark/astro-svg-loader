@@ -28,4 +28,7 @@ import Svg from "astro-svg-loader";
 />
 ```
 
+Be sure to use a raw import: `?raw`, or you'll import the URL rather than the
+SVG source.
+
 [![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/jasikpark/astro-svg-loader/)
