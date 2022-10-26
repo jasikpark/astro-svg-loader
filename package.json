@@ -30,9 +30,11 @@
     "test:watch:ui": "vitest --ui",
     "check:astro": "astro check",
     "check:ts": "tsc -p .",
-    "check": "run-p check:*"
+    "check": "run-p check:*",
+    "version": "changeset version && pnpm install --no-frozen-lockfile && pnpm run format"
   },
   "devDependencies": {
+    "@changesets/cli": "^2.25.0",
     "@ianvs/prettier-plugin-sort-imports": "^3.4.2",
     "@vitest/ui": "^0.24.3",
     "astro": "^1.5.2",
