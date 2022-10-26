@@ -13,14 +13,9 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
-      - name: Install pnpm
-        uses: pnpm/action-setup@v2.2.1
-      - name: Install node
-        uses: actions/setup-node@v3
+      - name: Install Tools & Dependencies
+        uses: ./.github/actions/install
         with:
           node-version: 16
-          cache: "pnpm"
-      - name: Install dependencies
-        run: pnpm install --frozen-lockfile
       - name: Check formatting
         run: npm run format:check
