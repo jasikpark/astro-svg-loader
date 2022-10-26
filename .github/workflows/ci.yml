@@ -35,5 +35,15 @@ jobs:
           node-version: 16
       - name: Test
         run: pnpm test
+  build-docs:
+    name: Smoke-Test Docs Site
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+      - name: Install Tools & Dependencies
+        uses: ./.github/actions/install
+        with:
+          node-version: 16
       - name: Build the docs
         run: pnpm build
