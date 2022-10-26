@@ -35,3 +35,5 @@ jobs:
           node-version: 16
       - name: Test
         run: pnpm test
+      - name: Build the docs
+        run: pnpm build
