@@ -24,6 +24,7 @@
     "build": "astro build",
     "preview": "astro preview",
     "format": "prettier -w --plugin-search-dir=. .",
+    "format:check": "prettier -c --plugin-search-dir=. .",
     "test": "vitest --run",
     "test:watch": "vitest",
     "test:watch:ui": "vitest --ui",
