@@ -4,5 +4,6 @@
     "jsx": "react-jsx",
     "skipLibCheck": true,
     "baseUrl": "."
-  }
+  },
+  "include": ["src"]
 }
