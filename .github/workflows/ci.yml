@@ -1,0 +1,37 @@
+name: CI
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+jobs:
+  lint:
+    name: Lint and typecheck
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+      - name: Install Tools & Dependencies
+        uses: ./.github/actions/install
+        with:
+          node-version: 16
+      - name: Check `*.astro` types
+        run: pnpm run check:astro
+      - name: Check `*.ts` types
+        run: pnpm run check:ts
+      - name: Check formatting
+        run: pnpm run format:check
+  test:
+    name: Test
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+      - name: Install Tools & Dependencies
+        uses: ./.github/actions/install
+        with:
+          node-version: 16
+      - name: Test
+        run: pnpm test
