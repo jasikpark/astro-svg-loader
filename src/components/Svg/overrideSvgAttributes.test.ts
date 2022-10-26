@@ -9,12 +9,26 @@ const whitespaceArb = fc.stringOf(fc.constant(" "));
 const svgArbitrary = fc
   .record({
     start: fc
-      .mixedCase(fc.constant("<svg>"))
-      .map((svg) => `${whitespaceArb}${svg}${whitespaceArb}`),
+      .record({
+        preWhitespace: whitespaceArb,
+        svg: fc.mixedCase(fc.constant("<svg>")),
+        postWhitespace: whitespaceArb,
+      })
+      .map(
+        ({ preWhitespace, svg, postWhitespace }) =>
+          `${preWhitespace}${svg}${postWhitespace}`
+      ),
     middle: fc.fullUnicodeString(),
     end: fc
-      .mixedCase(fc.constant("</svg>"))
-      .map((svg) => `${whitespaceArb}${svg}${whitespaceArb}`),
+      .record({
+        preWhitespace: whitespaceArb,
+        svg: fc.mixedCase(fc.constant("</svg>")),
+        postWhitespace: whitespaceArb,
+      })
+      .map(
+        ({ preWhitespace, svg, postWhitespace }) =>
+          `${preWhitespace}${svg}${postWhitespace}`
+      ),
   })
   .map(({ start, middle, end }) => `${start}${middle}${end}`);
 
