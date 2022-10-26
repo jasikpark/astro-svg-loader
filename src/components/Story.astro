@@ -3,21 +3,26 @@ import { Code } from "astro/components";
 
 type Props = {
   title: string;
-  src: Promise<typeof import("*.astro?raw")>;
+  /** Provide a code example for the story */
+  source: string;
 };
+
+const { title, source } = Astro.props as Props;
 ---
 
 <div class="Story">
   <p>
-    {Astro.props.title}:
+    {title}:
   </p>
-  <details class="Story_codeWrapper">
-    <summary>Show component source</summary>
-    <Code code={(await Astro.props.src).default} lang="astro" />
-  </details>
 
-  <div>
-    <slot />
+  <div class="Story_grid">
+    <div class="Story_codeWrapper">
+      {source ? <Code code={source} lang="astro" /> : null}
+    </div>
+
+    <div>
+      <slot />
+    </div>
   </div>
 </div>
 
@@ -26,9 +31,15 @@ type Props = {
     max-width: 100%;
   }
 
-  .Story_codeWrapper > :global(pre) {
-    text-align: left;
-    padding: 2rem;
-    border-radius: 2rem;
+  .Story_grid {
+    display: grid;
+    grid-template-columns: auto;
+    grid-gap: 2rem;
+  }
+
+  .Story_codeWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 </style>
