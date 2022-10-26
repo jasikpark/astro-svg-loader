@@ -20,9 +20,9 @@
   ],
   "scripts": {
     "preinstall": "npx only-allow pnpm",
-    "demo:dev": "astro dev",
-    "demo:build": "astro build",
-    "demo:preview": "astro preview",
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
     "format": "prettier -w --plugin-search-dir=. .",
     "test": "vitest --run",
     "test:watch": "vitest",

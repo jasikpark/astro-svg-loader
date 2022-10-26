@@ -15,26 +15,18 @@ const { title, source } = Astro.props as Props;
     {title}:
   </p>
 
-  <div class="Story_grid">
-    <div class="Story_codeWrapper">
-      {source ? <Code code={source} lang="astro" /> : null}
-    </div>
+  <div class="Story_codeWrapper" style="margin-block-end: 2rem;">
+    {source ? <Code code={source} lang="astro" /> : null}
+  </div>
 
-    <div>
-      <slot />
-    </div>
+  <div>
+    <slot />
   </div>
 </div>
 
 <style>
   .Story {
     max-width: 100%;
-  }
-
-  .Story_grid {
-    display: grid;
-    grid-template-columns: auto;
-    grid-gap: 2rem;
   }
 
   .Story_codeWrapper {
