@@ -19,7 +19,7 @@ jobs:
           node-version: 16
           cache: "pnpm"
       - name: Install dependencies
-        run: pnpm install
+        run: pnpm install --frozen-lockfile
       - name: Check `*.astro` types
         run: npm run check:astro
       - name: Check `*.ts` types
