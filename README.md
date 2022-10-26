@@ -12,7 +12,7 @@ Peer deps are `astro`
 
 ```
 // or pnpm or yarn
-npm add -D github:jasikpark/astro-svg-loader
+npm add -D @jasikpark/astro-svg-loader
 ```
 
 then in an Astro component:
