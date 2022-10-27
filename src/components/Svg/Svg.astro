@@ -11,6 +11,8 @@ export interface Props extends SVGAttributes {
 const { src, ...attributeOverrides } = Astro.props as Props;
 
 const SVG_NOT_FOUND = "Could not find an SVG at the provided `src`";
+const ALT_NOT_ALLOWED =
+  "`alt` is not a valid prop for svg, perhaps you mean `aria-label` or `aria-hidden`?";
 
 const svgImport = await src;
 
@@ -22,6 +24,10 @@ const svgSource = svgImport.default;
 
 if (!svgSource) {
   throw new Error(SVG_NOT_FOUND);
+}
+
+if ("alt" in attributeOverrides) {
+  throw new Error(ALT_NOT_ALLOWED);
 }
 
 if (!svgSource.trimStart().toLowerCase().startsWith("<svg")) {
