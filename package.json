@@ -35,7 +35,7 @@
   },
   "devDependencies": {
     "@changesets/cli": "^2.25.0",
-    "@ianvs/prettier-plugin-sort-imports": "^3.4.2",
+    "@ianvs/prettier-plugin-sort-imports": "^3.7.1",
     "@vitest/ui": "^0.24.3",
     "astro": "^1.6.0",
     "astro-remote": "^0.2.3",
