@@ -8,6 +8,9 @@ for
 [raw imports](https://vitejs.dev/guide/assets.html#importing-asset-as-string) to
 do the trick.
 
+Taking inspiration from <https://css-tricks.com/pretty-good-svg-icon-system/> 
+that holds that icons should always be inlined.
+
 Usage:
 
 Peer deps are `astro`
@@ -38,3 +41,9 @@ SVG source.
 ## License
 
 [![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fjasikpark%2Fastro-svg-loader.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2Fjasikpark%2Fastro-svg-loader?ref=badge_large)
+
+
+## Inspiration
+
+- [astro-icon](https://github.com/natemoo-re/astro-icon)
+- [svgr](https://react-svgr.com/)
