@@ -11,11 +11,11 @@ specifiers:
   prettier-plugin-astro: ^0.7.0
   shiki: ^0.11.1
   typescript: ^4.8.4
-  ultrahtml: 1.0.0-next.4
+  ultrahtml: 1.2.0
   vitest: ^0.25.0
 
 dependencies:
-  ultrahtml: 1.0.0-next.4
+  ultrahtml: 1.2.0
 
 devDependencies:
   '@changesets/cli': 2.25.2
@@ -4599,8 +4599,8 @@ packages:
     hasBin: true
     dev: true
 
-  /ultrahtml/1.0.0-next.4:
-    resolution: {integrity: sha512-Y6lU3i9asEyzQfUHh5bhWiPDdR+vk+nta0XEouAi7gBKZ6PqUKVMNW693yYYBchDOBv0D22LqNz0puOpeM/7pQ==}
+  /ultrahtml/1.2.0:
+    resolution: {integrity: sha512-vxZM2yNvajRmCj/SknRYGNXk2tqiy6kRNvZjJLaleG3zJbSh/aNkOqD1/CVzypw8tyHyhpzYuwQgMMhUB4ZVNQ==}
     dev: false
 
   /unbox-primitive/1.0.2:

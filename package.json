@@ -55,6 +55,6 @@
   },
   "packageManager": "pnpm@7.16.0",
   "dependencies": {
-    "ultrahtml": "1.0.0-next.4"
+    "ultrahtml": "1.2.0"
   }
 }
