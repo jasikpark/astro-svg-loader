@@ -5,6 +5,7 @@ specifiers:
   '@ianvs/prettier-plugin-sort-imports': ^3.4.2
   '@vitest/ui': ^0.28.0
   astro: ^2.0.0
+  astro-remote: ^0.2.3
   fast-check: ^3.3.0
   npm-run-all: ^4.1.5
   prettier: ^2.7.1
@@ -22,6 +23,7 @@ devDependencies:
   '@ianvs/prettier-plugin-sort-imports': 3.7.1_prettier@2.8.3
   '@vitest/ui': 0.28.2
   astro: 2.0.0
+  astro-remote: 0.2.3
   fast-check: 3.6.2
   npm-run-all: 4.1.5
   prettier: 2.8.3
@@ -1137,6 +1139,14 @@ packages:
     resolution: {integrity: sha512-jgsaNduz+ndvGyFt3uSuWqvy4lCnIJiovtouQN5JZHOKCS2QuhEdbcQHFhVksz2N2U9hXJo8odG7ETyWlEeuDw==}
     dev: true
 
+  /astro-remote/0.2.3:
+    resolution: {integrity: sha512-vsY736YjWhpFgx4KUxCBdK0QJmOk0W61VQwO7v6qmfGdIxZyx6N7hBNou57w2mw68hQSe5AbRs602pi05GDMHw==}
+    dependencies:
+      he: 1.2.0
+      marked: 4.2.12
+      ultrahtml: 0.1.3
+    dev: true
+
   /astro/2.0.0:
     resolution: {integrity: sha512-4ihZinpZXAgHbLPIPLsrXedZ//geJ5EvnzVk4DMrcUvk9ehcgSwyo2sJtG4QtmnHC92Zkmb8IiScJfczEm7ceA==}
     engines: {node: '>=16.12.0', npm: '>=6.14.0'}
@@ -2182,6 +2192,11 @@ packages:
       space-separated-tokens: 2.0.2
     dev: true
 
+  /he/1.2.0:
+    resolution: {integrity: sha512-F/1DnUGPopORZi0ni+CvrCgHQ5FyEAHRLSApuYWMmrbSwoN2Mn/7k+Gl38gJnR7yyDZk6WLXwiGod1JOWNDKGw==}
+    hasBin: true
+    dev: true
+
   /hosted-git-info/2.8.9:
     resolution: {integrity: sha512-mxIDAb9Lsm6DoOJ7xH+5+X4y1LU/4Hi50L9C5sIswK3JzULS4bwk1FvjdBgvYR4bzT4tuUQiC15FE2f5HbLvYw==}
     dev: true
@@ -2623,6 +2638,12 @@ packages:
 
   /markdown-table/3.0.3:
     resolution: {integrity: sha512-Z1NL3Tb1M9wH4XESsCDEksWoKTdlUafKc4pt0GRwjUyXaCFZ+dc3g2erqB6zm3szA2IUSi7VnPI+o/9jnxh9hw==}
+    dev: true
+
+  /marked/4.2.12:
+    resolution: {integrity: sha512-yr8hSKa3Fv4D3jdZmtMMPghgVt6TWbk86WQaWhDloQjRSQhMMYCAro7jP7VDJrjjdV8pxVxMssXS8B8Y5DZ5aw==}
+    engines: {node: '>= 12'}
+    hasBin: true
     dev: true
 
   /mdast-util-definitions/5.1.1:
@@ -4236,6 +4257,10 @@ packages:
 
   /ufo/1.0.1:
     resolution: {integrity: sha512-boAm74ubXHY7KJQZLlXrtMz52qFvpsbOxDcZOnw/Wf+LS4Mmyu7JxmzD4tDLtUQtmZECypJ0FrCz4QIe6dvKRA==}
+    dev: true
+
+  /ultrahtml/0.1.3:
+    resolution: {integrity: sha512-P24ulZdT9UKyQuKA1IApdAZ+F9lwruGvmKb4pG3+sMvR3CjN0pjawPnxuSABHQFB+XqnB35TVXzJPOBYjCv6Kw==}
     dev: true
 
   /ultrahtml/1.2.0:

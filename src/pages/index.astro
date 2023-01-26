@@ -84,6 +84,37 @@ import Svg from "@jasikpark/astro-svg-loader";
       src={import("../assets/astro-full-logo-light.svg?raw")}
     />
   </Story>
+
+  <Story
+    title="Svg / Import source from `/public`"
+    source={`---
+import Svg from "@jasikpark/astro-svg-loader";
+---
+
+<div>
+<span class="sr-only">Astro</span>
+<Svg
+  aria-hidden={true}
+  height="200"
+  width="1242"
+  src={import("/astro-full-logo-light.svg?raw")}
+/>
+</div>`}
+  >
+    <aside style="margin-block-end: 1rem;">
+      No need to include <code>public/</code> in the import, just reference it like
+      an image tag.
+    </aside>
+    <div>
+      <span class="sr-only">Astro</span>
+      <Svg
+        aria-hidden={true}
+        height="200"
+        width="1242"
+        src={import("/astro-full-logo-light.svg?raw")}
+      />
+    </div>
+  </Story>
 </Layout>
 
 <style>

@@ -1,5 +1,7 @@
 ---
 import { Code } from "astro/components";
+import "astro-remote";
+import { Markdown } from "astro-remote";
 
 type Props = {
   title: string;
@@ -11,9 +13,11 @@ const { title, source } = Astro.props as Props;
 ---
 
 <div class="Story">
-  <p>
-    {title}:
-  </p>
+  <Markdown
+    content={`${title}:`}
+    sanitize={{ allowElements: ["b", "i", "code"] }}
+    components={{ p: "h3" }}
+  />
 
   <div class="Story_codeWrapper" style="margin-block-end: 2rem;">
     {source ? <Code code={source} lang="astro" /> : null}
