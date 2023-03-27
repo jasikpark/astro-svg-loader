@@ -9,7 +9,7 @@ specifiers:
   npm-run-all: ^4.1.5
   prettier: ^2.7.1
   prettier-plugin-astro: ^0.8.0
-  shiki: ^0.12.0
+  shiki: ^0.14.0
   typescript: ^5.0.0
   ultrahtml: 1.2.0
   vitest: ^0.28.0
@@ -26,7 +26,7 @@ devDependencies:
   npm-run-all: 4.1.5
   prettier: 2.8.7
   prettier-plugin-astro: 0.8.0
-  shiki: 0.12.1
+  shiki: 0.14.1
   typescript: 5.0.2
   vitest: 0.28.5_@vitest+ui@0.28.5
 
@@ -1078,6 +1078,10 @@ packages:
   /ansi-regex/6.0.1:
     resolution: {integrity: sha512-n5M855fKb2SsfMIiFFoVrABHJC8QtHwVx+mHWP3QcEqBHYienj5dHSgjbxtC0WEZXYt4wcD6zrQElDPhFuZgfA==}
     engines: {node: '>=12'}
+    dev: true
+
+  /ansi-sequence-parser/1.1.0:
+    resolution: {integrity: sha512-lEm8mt52to2fT8GhciPCGeCXACSz2UwIN4X2e2LJSnZ5uAbn2/dsYdOmUXq0AtWS5cpAupysIneExOgH0Vd2TQ==}
     dev: true
 
   /ansi-styles/3.2.1:
@@ -3879,9 +3883,10 @@ packages:
       vscode-textmate: 6.0.0
     dev: true
 
-  /shiki/0.12.1:
-    resolution: {integrity: sha512-aieaV1m349rZINEBkjxh2QbBvFFQOlgqYTNtCal82hHj4dDZ76oMlQIX+C7ryerBTDiga3e5NfH6smjdJ02BbQ==}
+  /shiki/0.14.1:
+    resolution: {integrity: sha512-+Jz4nBkCBe0mEDqo1eKRcCdjRtrCjozmcbTUjbPTX7OOJfEbTZzlUWlZtGe3Gb5oV1/jnojhG//YZc3rs9zSEw==}
     dependencies:
+      ansi-sequence-parser: 1.1.0
       jsonc-parser: 3.2.0
       vscode-oniguruma: 1.7.0
       vscode-textmate: 8.0.0
