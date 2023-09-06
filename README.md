@@ -24,7 +24,7 @@ then in an Astro component:
 
 ```astro
 ---
-import Svg from "astro-svg-loader";
+import Svg from "@jasikpark/astro-svg-loader";
 ---
 
 <Svg
