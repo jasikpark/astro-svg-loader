@@ -2,8 +2,8 @@ lockfileVersion: '6.0'
 
 dependencies:
   ultrahtml:
-    specifier: 1.2.0
-    version: 1.2.0
+    specifier: 1.5.2
+    version: 1.5.2
 
 devDependencies:
   '@changesets/cli':
@@ -4321,8 +4321,8 @@ packages:
     resolution: {integrity: sha512-MvlCc4GHrmZdAllBc0iUDowff36Q9Ndw/UzqmEKyrfSzokTd9ZCy1i+IIk5hrYKkjoYVQyNbrw7/F8XJ2rEwTg==}
     dev: true
 
-  /ultrahtml@1.2.0:
-    resolution: {integrity: sha512-vxZM2yNvajRmCj/SknRYGNXk2tqiy6kRNvZjJLaleG3zJbSh/aNkOqD1/CVzypw8tyHyhpzYuwQgMMhUB4ZVNQ==}
+  /ultrahtml@1.5.2:
+    resolution: {integrity: sha512-qh4mBffhlkiXwDAOxvSGxhL0QEQsTbnP9BozOK3OYPEGvPvdWzvAUaXNtUSMdNsKDtuyjEbyVUPFZ52SSLhLqw==}
     dev: false
 
   /unbox-primitive@1.0.2:
