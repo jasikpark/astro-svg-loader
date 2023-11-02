@@ -37,7 +37,7 @@
     "@changesets/cli": "^2.25.0",
     "@ianvs/prettier-plugin-sort-imports": "^4.1.1",
     "@vitest/ui": "^0.34.0",
-    "astro": "^2.0.0",
+    "astro": "^3.0.0",
     "fast-check": "^3.3.0",
     "npm-run-all": "^4.1.5",
     "prettier": "prettier/prettier#5f6fb2580fb98501fd6acdb1382f18c7f13e9d33",
@@ -47,7 +47,7 @@
     "vitest": "^0.34.0"
   },
   "peerDependencies": {
-    "astro": "^2.0.0"
+    "astro": "^3.0.0"
   },
   "engines": {
     "node": ">18",
