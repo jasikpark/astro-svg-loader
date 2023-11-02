@@ -6,8 +6,9 @@ module.exports = {
     "plugin:@typescript-eslint/strict-type-checked",
     "plugin:@typescript-eslint/stylistic-type-checked",
     "plugin:astro/recommended",
+    "plugin:jsx-a11y/recommended",
   ],
-  plugins: ["@typescript-eslint", "import"],
+  plugins: ["@typescript-eslint", "import", "jsx-a11y"],
   overrides: [
     // By default eslint only lints .js.  Adding others to overrides will cause them to lint as well
     // https://eslint.org/docs/user-guide/migrating-to-7.0.0#lint-files-matched-by-overridesfiles-by-default
