@@ -32,7 +32,8 @@
     "check:astro": "astro check",
     "check:ts": "tsc -p .",
     "check": "run-p check:*",
-    "version": "changeset version && pnpm install --no-frozen-lockfile && pnpm format"
+    "version": "changeset version && pnpm install --no-frozen-lockfile && pnpm format",
+    "changeset": "changeset"
   },
   "devDependencies": {
     "@astrojs/check": "^0.3.1",
