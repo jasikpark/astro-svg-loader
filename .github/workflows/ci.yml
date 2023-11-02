@@ -16,11 +16,13 @@ jobs:
       - name: Install Tools & Dependencies
         uses: ./.github/actions/install
       - name: Check `*.astro` types
-        run: pnpm run check:astro
+        run: pnpm check:astro
       - name: Check `*.ts` types
-        run: pnpm run check:ts
+        run: pnpm check:ts
+      - name: Lint astro and ts
+        run: pnpm lint
       - name: Check formatting
-        run: pnpm run format:check
+        run: pnpm format:check
   test:
     name: Test
     runs-on: ubuntu-latest
