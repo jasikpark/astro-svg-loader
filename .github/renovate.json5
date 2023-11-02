@@ -7,4 +7,10 @@
     enabled: true,
     automerge: true,
   },
+  packageRules: [
+    {
+      groupName: "prettier and plugins",
+      matchPackageNames: ["prettier", "*prettier-plugin-*"],
+    },
+  ],
 }
