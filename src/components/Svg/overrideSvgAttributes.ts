@@ -8,7 +8,7 @@ const MUST_START_WITH_SVG = "`svgSource` must begin with `<svg`";
 
 export async function overrideSvgAttributes(
   svgSource: string,
-  attributeOverrides: SVGAttributes = {}
+  attributeOverrides: SVGAttributes = {},
 ): Promise<string> {
   if (!svgSource) {
     throw new Error(EMPTY_STRING_ERR);
@@ -20,14 +20,14 @@ export async function overrideSvgAttributes(
   const doc = parse(svgSource) as DocumentNode;
 
   const firstSVGNode = doc.children.find(
-    ({ type, name }: Node) => type === 1 && /svg/i.test(name)
+    ({ type, name }: Node) => type === 1 && /svg/i.test(name),
   );
 
   const mergedAttributes = Object.fromEntries(
     Object.entries({
       ...firstSVGNode.attributes,
       ...attributeOverrides,
-    }).filter(([, value]) => !!value)
+    }).filter(([, value]) => !!value),
   );
 
   const updatedSVG = {

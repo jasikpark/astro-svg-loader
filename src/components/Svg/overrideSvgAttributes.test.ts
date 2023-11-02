@@ -16,7 +16,7 @@ const svgArbitrary = fc
       })
       .map(
         ({ preWhitespace, svg, postWhitespace }) =>
-          `${preWhitespace}${svg}${postWhitespace}`
+          `${preWhitespace}${svg}${postWhitespace}`,
       ),
     middle: fc.fullUnicodeString(),
     end: fc
@@ -27,7 +27,7 @@ const svgArbitrary = fc
       })
       .map(
         ({ preWhitespace, svg, postWhitespace }) =>
-          `${preWhitespace}${svg}${postWhitespace}`
+          `${preWhitespace}${svg}${postWhitespace}`,
       ),
   })
   .map(({ start, middle, end }) => `${start}${middle}${end}`);
@@ -60,7 +60,7 @@ describe("overrideSvgAtrributes", () => {
       await overrideSvgAttributes(`<svg height="100" width=40></svg>`, {
         height: 400,
         width: 20,
-      })
+      }),
     ).toBe('<svg height="400" width="20"></svg>');
   });
 
@@ -69,7 +69,7 @@ describe("overrideSvgAtrributes", () => {
       await overrideSvgAttributes(`<svg></svg>`, {
         height: null,
         width: undefined,
-      })
+      }),
     ).toBe("<svg></svg>");
     expect(
       await overrideSvgAttributes(
@@ -77,29 +77,29 @@ describe("overrideSvgAtrributes", () => {
         {
           height: null,
           width: undefined,
-        }
-      )
+        },
+      ),
     ).toBe(`<svg aria-hidden="true"></svg>`);
   });
 
   it("should throw an error if `svgSource` is empty", async () => {
     await expect(
-      async () => await overrideSvgAttributes("")
+      async () => await overrideSvgAttributes(""),
     ).rejects.toThrowErrorMatchingInlineSnapshot(
-      '"`svgSource` must have content"'
+      '"`svgSource` must have content"',
     );
   });
 
   it("should throw an error if svgSource doesn't start with `<svg`", async () => {
     await expect(
-      async () => await overrideSvgAttributes("<div></div>")
+      async () => await overrideSvgAttributes("<div></div>"),
     ).rejects.toThrowErrorMatchingInlineSnapshot(
-      '"`svgSource` must begin with `<svg`"'
+      '"`svgSource` must begin with `<svg`"',
     );
     await expect(
-      async () => await overrideSvgAttributes("/images/www/hero.svg")
+      async () => await overrideSvgAttributes("/images/www/hero.svg"),
     ).rejects.toThrowErrorMatchingInlineSnapshot(
-      '"`svgSource` must begin with `<svg`"'
+      '"`svgSource` must begin with `<svg`"',
     );
   });
 
@@ -111,7 +111,7 @@ describe("overrideSvgAtrributes", () => {
         "aria-hidden": true,
         "aria-label": null,
         viewBox: "0 0 2712 894",
-      })
+      }),
     ).toBe('<SVG aria-hidden="true" viewBox="0 0 2712 894"></SVG>');
 
     await fc.assert(
@@ -123,7 +123,7 @@ describe("overrideSvgAtrributes", () => {
           ctx.log(svgSource);
           const transformedSource = await overrideSvgAttributes(
             svgSource,
-            overrides
+            overrides,
           );
           ctx.log(transformedSource);
           expect(transformedSource).toBeTruthy();
@@ -136,8 +136,8 @@ describe("overrideSvgAtrributes", () => {
             .forEach(([override]) => {
               expect(transformedSource).toContain(override);
             });
-        }
-      )
+        },
+      ),
     );
   });
 });
@@ -147,7 +147,7 @@ describe("parse()", () => {
     await fc.assert(
       fc.asyncProperty(fc.fullUnicodeString(), async (input) => {
         expect(await parse(input)).toBeTruthy();
-      })
+      }),
     );
   });
 });
