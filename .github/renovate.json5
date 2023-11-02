@@ -10,7 +10,7 @@
   packageRules: [
     {
       groupName: "prettier and plugins",
-      matchPackageNames: ["prettier", "*prettier-plugin-*"],
+      matchPackageNames: ["prettier"],
     },
   ],
 }
