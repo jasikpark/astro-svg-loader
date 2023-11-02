@@ -1,5 +1,15 @@
 # @jasikpark/astro-svg-loader
 
+## 0.2.0
+
+### Minor Changes
+
+- f755968: Update to allow Astro v3 as a valid peer dep
+
+### Patch Changes
+
+- afa45a0: Start publishing with provenance (https://docs.npmjs.com/generating-provenance-statements)
+
 ## 0.1.0
 
 ### Minor Changes
