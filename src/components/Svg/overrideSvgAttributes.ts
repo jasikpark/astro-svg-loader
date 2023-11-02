@@ -1,7 +1,7 @@
 /// <reference types="astro/astro-jsx" />
 
 import type { SVGAttributes } from "../../types";
-import { DocumentNode, Node, parse, render } from "ultrahtml";
+import { type DocumentNode, type Node, parse, render } from "ultrahtml";
 
 const EMPTY_STRING_ERR = "`svgSource` must have content";
 const MUST_START_WITH_SVG = "`svgSource` must begin with `<svg`";
