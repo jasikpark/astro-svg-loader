@@ -3,5 +3,12 @@
   "[astro]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "languageToolLinter.languageTool.ignoredWordsInWorkspace": ["astro", "vite"]
+  "languageToolLinter.languageTool.ignoredWordsInWorkspace": ["astro", "vite"],
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "astro", // Enable .astro
+    "typescript", // Enable .ts
+    "typescriptreact" // Enable .tsx
+  ]
 }

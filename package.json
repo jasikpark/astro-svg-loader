@@ -28,17 +28,22 @@
     "test": "vitest --run",
     "test:watch": "vitest",
     "test:watch:ui": "vitest --ui",
+    "lint": "eslint",
     "check:astro": "astro check",
     "check:ts": "tsc -p .",
     "check": "run-p check:*",
-    "version": "changeset version && pnpm install --no-frozen-lockfile && pnpm run format"
+    "version": "changeset version && pnpm install --no-frozen-lockfile && pnpm format"
   },
   "devDependencies": {
     "@astrojs/check": "^0.3.1",
     "@changesets/cli": "^2.25.0",
     "@ianvs/prettier-plugin-sort-imports": "^4.1.1",
+    "@typescript-eslint/parser": "^6.9.1",
     "@vitest/ui": "^0.34.0",
     "astro": "^3.4.2",
+    "eslint": "^8.52.0",
+    "eslint-plugin-astro": "^0.29.1",
+    "eslint-plugin-jsx-a11y": "^6.8.0",
     "fast-check": "^3.3.0",
     "npm-run-all": "^4.1.5",
     "prettier": "prettier/prettier#5f6fb2580fb98501fd6acdb1382f18c7f13e9d33",
