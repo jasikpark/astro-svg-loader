@@ -48,7 +48,7 @@
     "vitest": "^0.34.0"
   },
   "peerDependencies": {
-    "astro": "^2.0.0"
+    "astro": "^2.0.0 || ^3.0.0"
   },
   "engines": {
     "node": ">18",
