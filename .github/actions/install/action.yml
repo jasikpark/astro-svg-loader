@@ -1,13 +1,6 @@
 name: Install Tools & Dependencies
 description: Installs pnpm, Node.js & package dependencies
 
-inputs:
-  node-version:
-    description: "Node version"
-    required: false
-    type: number
-    default: 16
-
 runs:
   using: composite
   steps:
@@ -17,9 +10,9 @@ runs:
     - name: Setup Node ${{ inputs.node-version }}
       uses: actions/setup-node@v4
       with:
-        node-version: ${{ inputs.node-version }}
+        node-version-file: '.nvmrc'
         cache: pnpm
 
     - name: Install dependencies
-      run: pnpm install --frozen-lockfile
+      run: pnpm install
       shell: bash
