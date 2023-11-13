@@ -1,4 +1,4 @@
-/** @type {import("prettier").Config} */
+/** @type {import("prettier").Config & { experimentalTernaries: true }} */
 export default {
   proseWrap: "preserve",
   plugins: ["prettier-plugin-astro"],
@@ -10,4 +10,5 @@ export default {
       },
     },
   ],
+  experimentalTernaries: true,
 };

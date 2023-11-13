@@ -47,8 +47,8 @@
     "eslint-plugin-jsx-a11y": "^6.8.0",
     "fast-check": "^3.3.0",
     "npm-run-all": "^4.1.5",
-    "prettier": "prettier/prettier#5f6fb2580fb98501fd6acdb1382f18c7f13e9d33",
-    "prettier-plugin-astro": "^0.12.1",
+    "prettier": "^3.1.0",
+    "prettier-plugin-astro": "^0.12.2",
     "shiki": "^0.14.0",
     "typescript": "^5.2.2",
     "vitest": "^0.34.0"
