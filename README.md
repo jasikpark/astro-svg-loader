@@ -16,8 +16,15 @@ Usage:
 Peer deps are `astro`
 
 ```
-// or pnpm or yarn
 npm add -D @jasikpark/astro-svg-loader
+```
+
+```
+yarn add -D @jasikpark/astro-svg-loader
+```
+
+```
+pnpm add -D @jasikpark/astro-svg-loader
 ```
 
 then in an Astro component:
