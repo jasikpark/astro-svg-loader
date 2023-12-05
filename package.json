@@ -41,7 +41,7 @@
     "@ianvs/prettier-plugin-sort-imports": "^4.1.1",
     "@typescript-eslint/parser": "^6.9.1",
     "@vitest/ui": "^0.34.0",
-    "astro": "^3.4.2",
+    "astro": "^4.0.0",
     "eslint": "^8.52.0",
     "eslint-plugin-astro": "^0.30.0",
     "eslint-plugin-jsx-a11y": "^6.8.0",
@@ -54,7 +54,7 @@
     "vitest": "^0.34.0"
   },
   "peerDependencies": {
-    "astro": "^2.0.0 || ^3.0.0"
+    "astro": "^4.0.0"
   },
   "engines": {
     "node": ">18",
