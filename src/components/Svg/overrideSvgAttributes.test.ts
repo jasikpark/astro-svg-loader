@@ -104,7 +104,7 @@ describe("overrideSvgAtrributes", () => {
   });
 
   it("should accept and `svgSource` which starts with a comment `<!---`", async () => {
-    expect(await overrideSvgAttributes("<!-- some comment --><svg></svg>")).toBe('<svg></svg>')
+    expect(await overrideSvgAttributes("<!-- some comment --> <svg></svg>")).toBe('<svg></svg>')
   });
 
   it("should add properties successfully", async () => {
