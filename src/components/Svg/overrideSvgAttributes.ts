@@ -13,7 +13,8 @@ export async function overrideSvgAttributes(
   if (!svgSource) {
     throw new Error(EMPTY_STRING_ERR);
   }
-  if (!svgSource.trimStart().toLowerCase().startsWith("<svg")) {
+
+  if (!svgSource.trimStart().toLowerCase().replace(/<!--.*?-->/gs, "").startsWith("<svg")) {
     throw new Error(MUST_START_WITH_SVG);
   }
 

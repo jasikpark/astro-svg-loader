@@ -30,7 +30,7 @@ if ("alt" in attributeOverrides) {
   throw new Error(ALT_NOT_ALLOWED);
 }
 
-if (!svgSource.trimStart().toLowerCase().startsWith("<svg")) {
+if (!svgSource.trimStart().toLowerCase().replaceAll(/<!--.*?-->/gs, "").startsWith("<svg")) {
   throw new Error(`${SVG_NOT_FOUND}, provided: ${svgSource.slice(0, 23)}
   maybe you need to add '?raw' to the end of the import?`);
 }
