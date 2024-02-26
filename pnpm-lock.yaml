@@ -11,8 +11,8 @@ dependencies:
 
 devDependencies:
   '@astrojs/check':
-    specifier: ^0.3.1
-    version: 0.3.4(prettier-plugin-astro@0.12.3)(prettier@3.2.5)(typescript@5.3.3)
+    specifier: ^0.5.0
+    version: 0.5.2(prettier-plugin-astro@0.12.3)(prettier@3.2.5)(typescript@5.3.3)
   '@changesets/cli':
     specifier: ^2.25.0
     version: 2.27.1
@@ -74,8 +74,8 @@ packages:
       '@jridgewell/trace-mapping': 0.3.22
     dev: true
 
-  /@astrojs/check@0.3.4(prettier-plugin-astro@0.12.3)(prettier@3.2.5)(typescript@5.3.3):
-    resolution: {integrity: sha512-Wi4KwW38J3GCd/U6LH2UuU4uc4P/K1WYaqhoKm2o7rVoGhQfO+RWrSO26rUPRXYbmae8JugAgpCmsHC8bt5RlA==}
+  /@astrojs/check@0.5.2(prettier-plugin-astro@0.12.3)(prettier@3.2.5)(typescript@5.3.3):
+    resolution: {integrity: sha512-EGfZFfmbh1JVzeVYyqF1AgkljCT7/eiLMjoQ4StxYT0BVn2Ccr8EhztHt0UBHQtSGCxaEsYXByqCCJEkIgo6lA==}
     hasBin: true
     peerDependencies:
       typescript: ^5.0.0
