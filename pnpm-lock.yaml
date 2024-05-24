@@ -12,7 +12,7 @@ dependencies:
 devDependencies:
   '@astrojs/check':
     specifier: ^0.3.1
-    version: 0.3.4(prettier-plugin-astro@0.12.3)(prettier@3.2.5)(typescript@5.3.3)
+    version: 0.3.4(prettier-plugin-astro@0.14.0)(prettier@3.2.5)(typescript@5.3.3)
   '@changesets/cli':
     specifier: ^2.25.0
     version: 2.27.1
@@ -47,8 +47,8 @@ devDependencies:
     specifier: ^3.1.0
     version: 3.2.5
   prettier-plugin-astro:
-    specifier: ^0.12.2
-    version: 0.12.3
+    specifier: ^0.14.0
+    version: 0.14.0
   shiki:
     specifier: ^1.0.0
     version: 1.1.5
@@ -82,13 +82,13 @@ packages:
       '@jridgewell/trace-mapping': 0.3.25
     dev: true
 
-  /@astrojs/check@0.3.4(prettier-plugin-astro@0.12.3)(prettier@3.2.5)(typescript@5.3.3):
+  /@astrojs/check@0.3.4(prettier-plugin-astro@0.14.0)(prettier@3.2.5)(typescript@5.3.3):
     resolution: {integrity: sha512-Wi4KwW38J3GCd/U6LH2UuU4uc4P/K1WYaqhoKm2o7rVoGhQfO+RWrSO26rUPRXYbmae8JugAgpCmsHC8bt5RlA==}
     hasBin: true
     peerDependencies:
       typescript: ^5.0.0
     dependencies:
-      '@astrojs/language-server': 2.7.4(prettier-plugin-astro@0.12.3)(prettier@3.2.5)(typescript@5.3.3)
+      '@astrojs/language-server': 2.7.4(prettier-plugin-astro@0.14.0)(prettier@3.2.5)(typescript@5.3.3)
       chokidar: 3.6.0
       fast-glob: 3.3.2
       kleur: 4.1.5
@@ -103,10 +103,6 @@ packages:
     resolution: {integrity: sha512-o/ObKgtMzl8SlpIdzaxFnt7SATKPxu4oIP/1NL+HDJRzxfJcAkOTAb/ZKMRyULbz4q+1t2/DAebs2Z1QairkZw==}
     dev: true
 
-  /@astrojs/compiler@2.5.3:
-    resolution: {integrity: sha512-jzj01BRv/fmo+9Mr2FhocywGzEYiyiP2GVHje1ziGNU6c97kwhYGsnvwMkHrncAy9T9Vi54cjaMK7UE4ClX4vA==}
-    dev: true
-
   /@astrojs/compiler@2.7.1:
     resolution: {integrity: sha512-/POejAYuj8WEw7ZI0J8JBvevjfp9jQ9Wmu/Bg52RiNwGXkMV7JnYpsenVfHvvf1G7R5sXHGKlTcxlQWhoUTiGQ==}
     dev: true
@@ -115,7 +111,7 @@ packages:
     resolution: {integrity: sha512-06DD2ZnItMwUnH81LBLco3tWjcZ1lGU9rLCCBaeUCGYe9cI0wKyY2W3kDyoW1I6GmcWgt1fu+D1CTvz+FIKf8A==}
     dev: true
 
-  /@astrojs/language-server@2.7.4(prettier-plugin-astro@0.12.3)(prettier@3.2.5)(typescript@5.3.3):
+  /@astrojs/language-server@2.7.4(prettier-plugin-astro@0.14.0)(prettier@3.2.5)(typescript@5.3.3):
     resolution: {integrity: sha512-U317ZKx5VXg2Sy6iPgYOliOZ10Ji/eo8MGFCry2/yT+rYTfb81HbrSWUu9nsZzpFK66So5aprQutRWWM/m7mPQ==}
     hasBin: true
     peerDependencies:
@@ -127,7 +123,7 @@ packages:
       prettier-plugin-astro:
         optional: true
     dependencies:
-      '@astrojs/compiler': 2.5.3
+      '@astrojs/compiler': 2.7.1
       '@jridgewell/sourcemap-codec': 1.4.15
       '@volar/kit': 2.0.4(typescript@5.3.3)
       '@volar/language-core': 2.0.4
@@ -136,7 +132,7 @@ packages:
       '@volar/typescript': 2.0.4
       fast-glob: 3.3.2
       prettier: 3.2.5
-      prettier-plugin-astro: 0.12.3
+      prettier-plugin-astro: 0.14.0
       volar-service-css: 0.0.29(@volar/language-service@2.0.4)
       volar-service-emmet: 0.0.29(@volar/language-service@2.0.4)
       volar-service-html: 0.0.29(@volar/language-service@2.0.4)
@@ -2006,10 +2002,10 @@ packages:
     resolution: {integrity: sha512-CGaBseNtunAV2DCpwBXqTKq8+9Tw65XZetMaC0FsMoZuLj0gxNIkbCf2QyKYScVrNOU7/ayfNdVw8ZCSHBiqCg==}
     engines: {node: ^14.18.0 || >=16.0.0}
     dependencies:
-      '@astrojs/compiler': 2.5.3
+      '@astrojs/compiler': 2.7.1
       '@typescript-eslint/scope-manager': 5.62.0
       '@typescript-eslint/types': 5.62.0
-      astrojs-compiler-sync: 0.3.5(@astrojs/compiler@2.5.3)
+      astrojs-compiler-sync: 0.3.5(@astrojs/compiler@2.7.1)
       debug: 4.3.4
       entities: 4.5.0
       eslint-visitor-keys: 3.4.3
@@ -2096,13 +2092,13 @@ packages:
       - typescript
     dev: true
 
-  /astrojs-compiler-sync@0.3.5(@astrojs/compiler@2.5.3):
+  /astrojs-compiler-sync@0.3.5(@astrojs/compiler@2.7.1):
     resolution: {integrity: sha512-y420rhIIJ2HHDkYeqKArBHSdJNIIGMztLH90KGIX3zjcJyt/cr9Z2wYA8CP5J1w6KE7xqMh0DAkhfjhNDpQb2Q==}
     engines: {node: ^14.18.0 || >=16.0.0}
     peerDependencies:
       '@astrojs/compiler': '>=0.27.0'
     dependencies:
-      '@astrojs/compiler': 2.5.3
+      '@astrojs/compiler': 2.7.1
       synckit: 0.9.0
     dev: true
 
@@ -5319,8 +5315,8 @@ packages:
     engines: {node: '>= 0.8.0'}
     dev: true
 
-  /prettier-plugin-astro@0.12.3:
-    resolution: {integrity: sha512-GthUSu3zCvmtVyqlArosez0xE08vSJ0R1sWurxIWpABaCkNGYFANoUdFkqmIo54EV2uPLGcVJzOucWvCjPBWvg==}
+  /prettier-plugin-astro@0.14.0:
+    resolution: {integrity: sha512-7jRGJsexaRIyUzTk8uzXlP45cw6DQ5Ci4bTe0xCBCcuO1Fff8jJy9oI+kRCQKSdDFTSAArMSg8GpvzlKBtSaZA==}
     engines: {node: ^14.15.0 || >=16.0.0}
     dependencies:
       '@astrojs/compiler': 1.8.2
