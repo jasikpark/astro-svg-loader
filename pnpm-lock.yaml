@@ -6,8 +6,8 @@ settings:
 
 dependencies:
   ultrahtml:
-    specifier: 1.5.2
-    version: 1.5.2
+    specifier: 1.5.3
+    version: 1.5.3
 
 devDependencies:
   '@astrojs/check':
@@ -6743,8 +6743,8 @@ packages:
     resolution: {integrity: sha512-Hhy+BhRBleFjpJ2vchUNN40qgkh0366FWJGqVLYBHev0vpHTrXSA0ryT+74UiW6KWsldNurQMKGqCm1M2zBciQ==}
     dev: true
 
-  /ultrahtml@1.5.2:
-    resolution: {integrity: sha512-qh4mBffhlkiXwDAOxvSGxhL0QEQsTbnP9BozOK3OYPEGvPvdWzvAUaXNtUSMdNsKDtuyjEbyVUPFZ52SSLhLqw==}
+  /ultrahtml@1.5.3:
+    resolution: {integrity: sha512-GykOvZwgDWZlTQMtp5jrD4BVL+gNn2NVlVafjcFUJ7taY20tqYdwdoWBFy6GBJsNTZe1GkGPkSl5knQAjtgceg==}
     dev: false
 
   /unbox-primitive@1.0.2:
