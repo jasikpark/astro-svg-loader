@@ -24,7 +24,6 @@ export default tseslint.config(
     },
   },
   importFlatConfigs.recommended,
-  // @ts-expect-error -- the types mismatch. idc.
   importFlatConfigs.typescript,
   {
     settings: {
