@@ -23,8 +23,8 @@ devDependencies:
     specifier: 2.27.9
     version: 2.27.9
   '@ianvs/prettier-plugin-sort-imports':
-    specifier: 4.2.1
-    version: 4.2.1(prettier@3.2.5)
+    specifier: 4.3.1
+    version: 4.3.1(prettier@3.2.5)
   '@typescript-eslint/parser':
     specifier: 8.10.0
     version: 8.10.0(eslint@8.57.1)(typescript@5.4.5)
@@ -1068,8 +1068,8 @@ packages:
     resolution: {integrity: sha512-93zYdMES/c1D69yZiKDBj0V24vqNzB/koF26KPaagAfd3P/4gUlh3Dys5ogAK+Exi9QyzlD8x/08Zt7wIKcDcA==}
     deprecated: Use @eslint/object-schema instead
 
-  /@ianvs/prettier-plugin-sort-imports@4.2.1(prettier@3.2.5):
-    resolution: {integrity: sha512-NKN1LVFWUDGDGr3vt+6Ey3qPeN/163uR1pOPAlkWpgvAqgxQ6kSdUf1F0it8aHUtKRUzEGcK38Wxd07O61d7+Q==}
+  /@ianvs/prettier-plugin-sort-imports@4.3.1(prettier@3.2.5):
+    resolution: {integrity: sha512-ZHwbyjkANZOjaBm3ZosADD2OUYGFzQGxfy67HmGZU94mHqe7g1LCMA7YYKB1Cq+UTPCBqlAYapY0KXAjKEw8Sg==}
     peerDependencies:
       '@vue/compiler-sfc': 2.7.x || 3.x
       prettier: 2 || 3
