@@ -44,7 +44,7 @@
     "astro": "3.6.5",
     "eslint": "8.57.0",
     "eslint-plugin-astro": "0.31.4",
-    "eslint-plugin-jsx-a11y": "6.8.0",
+    "eslint-plugin-jsx-a11y": "6.10.0",
     "fast-check": "3.19.0",
     "npm-run-all2": "5.0.0",
     "prettier": "^3.1.0",
