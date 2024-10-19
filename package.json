@@ -36,7 +36,7 @@
     "changeset": "changeset"
   },
   "devDependencies": {
-    "@astrojs/check": "0.3.4",
+    "@astrojs/check": "0.9.4",
     "@changesets/cli": "2.27.9",
     "@ianvs/prettier-plugin-sort-imports": "4.2.1",
     "@typescript-eslint/parser": "6.21.0",
