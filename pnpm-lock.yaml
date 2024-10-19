@@ -12,7 +12,7 @@ dependencies:
 devDependencies:
   '@astrojs/check':
     specifier: 0.3.4
-    version: 0.3.4(prettier-plugin-astro@0.14.0)(prettier@3.2.5)(typescript@5.4.5)
+    version: 0.3.4(prettier-plugin-astro@0.14.1)(prettier@3.2.5)(typescript@5.4.5)
   '@changesets/cli':
     specifier: 2.27.5
     version: 2.27.5
@@ -47,8 +47,8 @@ devDependencies:
     specifier: ^3.1.0
     version: 3.2.5
   prettier-plugin-astro:
-    specifier: 0.14.0
-    version: 0.14.0
+    specifier: 0.14.1
+    version: 0.14.1
   shiki:
     specifier: 1.1.5
     version: 1.1.5
@@ -69,13 +69,13 @@ packages:
       '@jridgewell/trace-mapping': 0.3.25
     dev: true
 
-  /@astrojs/check@0.3.4(prettier-plugin-astro@0.14.0)(prettier@3.2.5)(typescript@5.4.5):
+  /@astrojs/check@0.3.4(prettier-plugin-astro@0.14.1)(prettier@3.2.5)(typescript@5.4.5):
     resolution: {integrity: sha512-Wi4KwW38J3GCd/U6LH2UuU4uc4P/K1WYaqhoKm2o7rVoGhQfO+RWrSO26rUPRXYbmae8JugAgpCmsHC8bt5RlA==}
     hasBin: true
     peerDependencies:
       typescript: ^5.0.0
     dependencies:
-      '@astrojs/language-server': 2.7.4(prettier-plugin-astro@0.14.0)(prettier@3.2.5)(typescript@5.4.5)
+      '@astrojs/language-server': 2.7.4(prettier-plugin-astro@0.14.1)(prettier@3.2.5)(typescript@5.4.5)
       chokidar: 3.6.0
       fast-glob: 3.3.2
       kleur: 4.1.5
@@ -86,8 +86,8 @@ packages:
       - prettier-plugin-astro
     dev: true
 
-  /@astrojs/compiler@1.8.2:
-    resolution: {integrity: sha512-o/ObKgtMzl8SlpIdzaxFnt7SATKPxu4oIP/1NL+HDJRzxfJcAkOTAb/ZKMRyULbz4q+1t2/DAebs2Z1QairkZw==}
+  /@astrojs/compiler@2.10.3:
+    resolution: {integrity: sha512-bL/O7YBxsFt55YHU021oL+xz+B/9HvGNId3F9xURN16aeqDK9juHGktdkCSXz+U4nqFACq6ZFvWomOzhV+zfPw==}
     dev: true
 
   /@astrojs/compiler@2.7.1:
@@ -98,7 +98,7 @@ packages:
     resolution: {integrity: sha512-06DD2ZnItMwUnH81LBLco3tWjcZ1lGU9rLCCBaeUCGYe9cI0wKyY2W3kDyoW1I6GmcWgt1fu+D1CTvz+FIKf8A==}
     dev: true
 
-  /@astrojs/language-server@2.7.4(prettier-plugin-astro@0.14.0)(prettier@3.2.5)(typescript@5.4.5):
+  /@astrojs/language-server@2.7.4(prettier-plugin-astro@0.14.1)(prettier@3.2.5)(typescript@5.4.5):
     resolution: {integrity: sha512-U317ZKx5VXg2Sy6iPgYOliOZ10Ji/eo8MGFCry2/yT+rYTfb81HbrSWUu9nsZzpFK66So5aprQutRWWM/m7mPQ==}
     hasBin: true
     peerDependencies:
@@ -119,7 +119,7 @@ packages:
       '@volar/typescript': 2.0.4
       fast-glob: 3.3.2
       prettier: 3.2.5
-      prettier-plugin-astro: 0.14.0
+      prettier-plugin-astro: 0.14.1
       volar-service-css: 0.0.29(@volar/language-service@2.0.4)
       volar-service-emmet: 0.0.29(@volar/language-service@2.0.4)
       volar-service-html: 0.0.29(@volar/language-service@2.0.4)
@@ -5166,11 +5166,11 @@ packages:
     engines: {node: '>= 0.8.0'}
     dev: true
 
-  /prettier-plugin-astro@0.14.0:
-    resolution: {integrity: sha512-7jRGJsexaRIyUzTk8uzXlP45cw6DQ5Ci4bTe0xCBCcuO1Fff8jJy9oI+kRCQKSdDFTSAArMSg8GpvzlKBtSaZA==}
+  /prettier-plugin-astro@0.14.1:
+    resolution: {integrity: sha512-RiBETaaP9veVstE4vUwSIcdATj6dKmXljouXc/DDNwBSPTp8FRkLGDSGFClKsAFeeg+13SB0Z1JZvbD76bigJw==}
     engines: {node: ^14.15.0 || >=16.0.0}
     dependencies:
-      '@astrojs/compiler': 1.8.2
+      '@astrojs/compiler': 2.10.3
       prettier: 3.2.5
       sass-formatter: 0.7.9
     dev: true
