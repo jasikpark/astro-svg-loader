@@ -35,7 +35,7 @@ import Svg from "@jasikpark/astro-svg-loader";
 ---
 
 <Svg
-  src={import("@assets/my-cool-illustration.svg?raw")}
+  src={import("#assets/my-cool-illustration.svg?raw")}
   aria-label="Cool illustration of an abstract nebula"
 />
 ```
