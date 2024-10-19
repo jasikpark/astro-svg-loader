@@ -16,7 +16,6 @@ export default tseslint.config(
     languageOptions: {
       parserOptions: {
         project: true,
-        tsconfigRootDir: import.meta.dirname,
       },
     },
     rules: {
@@ -24,7 +23,6 @@ export default tseslint.config(
     },
   },
   importFlatConfigs.recommended,
-  // @ts-expect-error -- the types mismatch. idc.
   importFlatConfigs.typescript,
   {
     settings: {
