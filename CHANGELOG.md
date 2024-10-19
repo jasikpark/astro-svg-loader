@@ -1,5 +1,11 @@
 # @jasikpark/astro-svg-loader
 
+## 0.3.0
+
+### Minor Changes
+
+- 523a49e: Permit Astro 4.0 as a peer dep
+
 ## 0.2.0
 
 ### Minor Changes
