@@ -4,7 +4,7 @@ import fc from "fast-check";
 import { parse } from "ultrahtml";
 import { describe, expect, it } from "vitest";
 
-const whitespaceArb = fc.stringOf(fc.constant(" "));
+const whitespaceArb = fc.string({ unit: fc.constant(" ") });
 
 const svgArbitrary = fc
   .record({
@@ -18,7 +18,7 @@ const svgArbitrary = fc
         ({ preWhitespace, svg, postWhitespace }) =>
           `${preWhitespace}${svg}${postWhitespace}`,
       ),
-    middle: fc.fullUnicodeString(),
+    middle: fc.string({ unit: "grapheme-composite" }),
     end: fc
       .record({
         preWhitespace: whitespaceArb,
@@ -66,7 +66,7 @@ describe("overrideSvgAtrributes", () => {
 
   it("should not include null and undefined properties", async () => {
     expect(
-      await overrideSvgAttributes(`<svg></svg>`, {
+      await overrideSvgAttributes("<svg></svg>", {
         height: null,
         width: undefined,
       }),
@@ -145,9 +145,12 @@ describe("overrideSvgAtrributes", () => {
 describe("parse()", () => {
   it("should never throw", async () => {
     await fc.assert(
-      fc.asyncProperty(fc.fullUnicodeString(), async (input) => {
-        expect(await parse(input)).toBeTruthy();
-      }),
+      fc.asyncProperty(
+        fc.string({ unit: "grapheme-composite" }),
+        async (input) => {
+          expect(await parse(input)).toBeTruthy();
+        },
+      ),
     );
   });
 });
