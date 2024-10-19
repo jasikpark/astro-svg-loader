@@ -86,7 +86,7 @@ describe("overrideSvgAtrributes", () => {
     await expect(
       async () => await overrideSvgAttributes(""),
     ).rejects.toThrowErrorMatchingInlineSnapshot(
-      '"`svgSource` must have content"',
+      `[Error: \`svgSource\` must have content]`,
     );
   });
 
@@ -94,12 +94,12 @@ describe("overrideSvgAtrributes", () => {
     await expect(
       async () => await overrideSvgAttributes("<div></div>"),
     ).rejects.toThrowErrorMatchingInlineSnapshot(
-      '"`svgSource` must begin with `<svg`"',
+      `[Error: \`svgSource\` must begin with \`<svg\`]`,
     );
     await expect(
       async () => await overrideSvgAttributes("/images/www/hero.svg"),
     ).rejects.toThrowErrorMatchingInlineSnapshot(
-      '"`svgSource` must begin with `<svg`"',
+      `[Error: \`svgSource\` must begin with \`<svg\`]`,
     );
   });
 
