@@ -44,8 +44,8 @@ devDependencies:
     specifier: 6.10.0
     version: 6.10.0(eslint@8.57.1)
   fast-check:
-    specifier: 3.19.0
-    version: 3.19.0
+    specifier: 3.22.0
+    version: 3.22.0
   npm-run-all2:
     specifier: 5.0.0
     version: 5.0.0
@@ -3116,8 +3116,8 @@ packages:
       tmp: 0.0.33
     dev: true
 
-  /fast-check@3.19.0:
-    resolution: {integrity: sha512-CO2JX/8/PT9bDGO1iXa5h5ey1skaKI1dvecERyhH4pp3PGjwd3KIjMAXEg79Ps9nclsdt4oPbfqiAnLU0EwrAQ==}
+  /fast-check@3.22.0:
+    resolution: {integrity: sha512-8HKz3qXqnHYp/VCNn2qfjHdAdcI8zcSqOyX64GOMukp7SL2bfzfeDKjSd+UyECtejccaZv3LcvZTm9YDD22iCQ==}
     engines: {node: '>=8.0.0'}
     dependencies:
       pure-rand: 6.1.0
