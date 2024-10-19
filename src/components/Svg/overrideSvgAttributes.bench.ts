@@ -7,7 +7,7 @@ import { bench, describe, expect } from "vitest";
 const svgArbitrary = fc
   .record({
     start: fc.mixedCase(fc.constantFrom("<svg>")),
-    middle: fc.fullUnicodeString(),
+    middle: fc.string({ unit: "grapheme-composite" }),
     end: fc.mixedCase(fc.constantFrom("</svg>")),
   })
   .map(({ start, middle, end }) => `${start}${middle}${end}`);
@@ -46,7 +46,7 @@ describe("overrideSvgAtrributes", () => {
 
   bench("should not include null and undefined properties", async () => {
     expect(
-      await overrideSvgAttributes(`<svg></svg>`, {
+      await overrideSvgAttributes("<svg></svg>", {
         height: null,
         width: undefined,
       }),
@@ -128,9 +128,12 @@ describe("overrideSvgAtrributes", () => {
 describe("parse()", () => {
   bench("should never throw", async () => {
     await fc.assert(
-      fc.asyncProperty(fc.fullUnicodeString(), async (input) => {
-        expect(await parse(input)).toBeTruthy();
-      }),
+      fc.asyncProperty(
+        fc.string({ unit: "grapheme-composite" }),
+        async (input) => {
+          expect(await parse(input)).toBeTruthy();
+        },
+      ),
     );
   });
 });
