@@ -61,7 +61,7 @@
     "node": ">18",
     "pnpm": ">=7.9.5"
   },
-  "packageManager": "pnpm@9.12.2",
+  "packageManager": "pnpm@9.12.3",
   "dependencies": {
     "typescript-eslint": "^8.10.0",
     "ultrahtml": "1.5.3"
