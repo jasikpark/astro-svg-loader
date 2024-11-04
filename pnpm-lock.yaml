@@ -19,7 +19,7 @@ importers:
         specifier: 2.27.9
         version: 2.27.9
       '@eslint/js':
-        specifier: ^9.14.0
+        specifier: 9.14.0
         version: 9.14.0
       '@ianvs/prettier-plugin-sort-imports':
         specifier: 4.3.1
@@ -64,7 +64,7 @@ importers:
         specifier: 5.6.3
         version: 5.6.3
       typescript-eslint:
-        specifier: ^8.13.0
+        specifier: 8.13.0
         version: 8.13.0(eslint@8.57.1)(typescript@5.6.3)
       vitest:
         specifier: 2.1.4
