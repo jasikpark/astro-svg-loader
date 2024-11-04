@@ -15,7 +15,9 @@ export default tseslint.config(
   {
     languageOptions: {
       parserOptions: {
-        project: true,
+        projectService: true,
+        // @ts-expect-error -- dirname is missing on the type :shrug:
+        tsconfigRootDir: import.meta.dirname,
       },
     },
     rules: {
