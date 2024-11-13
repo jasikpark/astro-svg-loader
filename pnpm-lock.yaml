@@ -34,8 +34,8 @@ importers:
         specifier: 2.1.4
         version: 2.1.4(vitest@2.1.4)
       astro:
-        specifier: 4.16.10
-        version: 4.16.10(rollup@4.24.4)(typescript@5.6.3)
+        specifier: 4.16.11
+        version: 4.16.11(rollup@4.24.4)(typescript@5.6.3)
       eslint:
         specifier: 8.57.1
         version: 8.57.1
@@ -1013,8 +1013,8 @@ packages:
     resolution: {integrity: sha512-AGsGgcg7Jg9UpyCDgvl/EkdYpe1oMkFdmC2Zl+KWneoieLCtQIFjmcY8yt41gcNx4mby0w8BBJQcBmPuf8UAoQ==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
 
-  astro@4.16.10:
-    resolution: {integrity: sha512-a+nB4bZE50NXHLzVXUHtx/lYct2Aa8kbqZnWNrWqkU97RuhBuWJ5H5/LQbKRnBWGvqChKfJBiMWJe53TY9ieYQ==}
+  astro@4.16.11:
+    resolution: {integrity: sha512-Pm0ATut4f8kM2OKbSDbatO5Q/f2ynt1dbc5UGQN8I5bFnJvDbJj3R1NE513BOXXv4GQBKJZUshcZEMvlZpA61g==}
     engines: {node: ^18.17.1 || ^20.3.0 || >=21.0.0, npm: '>=9.6.5', pnpm: '>=7.1.0'}
     hasBin: true
 
@@ -4244,7 +4244,7 @@ snapshots:
       - supports-color
       - typescript
 
-  astro@4.16.10(rollup@4.24.4)(typescript@5.6.3):
+  astro@4.16.11(rollup@4.24.4)(typescript@5.6.3):
     dependencies:
       '@astrojs/compiler': 2.10.3
       '@astrojs/internal-helpers': 0.4.1
