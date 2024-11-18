@@ -41,7 +41,7 @@
     "@eslint/js": "9.14.0",
     "@ianvs/prettier-plugin-sort-imports": "4.4.0",
     "@types/eslint__js": "8.42.3",
-    "@typescript-eslint/parser": "8.14.0",
+    "@typescript-eslint/parser": "8.15.0",
     "@vitest/ui": "2.1.5",
     "astro": "4.16.13",
     "eslint": "8.57.1",
@@ -53,7 +53,7 @@
     "prettier-plugin-astro": "0.14.1",
     "shiki": "1.23.0",
     "typescript": "5.6.3",
-    "typescript-eslint": "8.14.0",
+    "typescript-eslint": "8.15.0",
     "vitest": "2.1.5"
   },
   "peerDependencies": {
