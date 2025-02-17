@@ -63,7 +63,7 @@
     "node": ">18",
     "pnpm": ">=7.9.5"
   },
-  "packageManager": "pnpm@10.3.0",
+  "packageManager": "pnpm@10.4.1",
   "dependencies": {
     "ultrahtml": "1.5.3"
   },
