@@ -49,8 +49,8 @@ importers:
         specifier: 6.10.2
         version: 6.10.2(eslint@8.57.1)
       fast-check:
-        specifier: 4.0.0
-        version: 4.0.0
+        specifier: 4.1.1
+        version: 4.1.1
       prettier:
         specifier: 3.5.3
         version: 3.5.3
@@ -1518,8 +1518,8 @@ packages:
     resolution: {integrity: sha512-hMQ4CX1p1izmuLYyZqLMO/qGNw10wSv9QDCPfzXfyFrOaCSSoRfqE1Kf1s5an66J5JZC62NewG+mK49jOCtQew==}
     engines: {node: '>=4'}
 
-  fast-check@4.0.0:
-    resolution: {integrity: sha512-aXLyLemZ7qhLNn2oq+YpjT2Xed21+i29WGAYuyrGbU4r8oinB3i4XR4e62O3NY6qmm5qHEDoc/7d+gMsri3AfA==}
+  fast-check@4.1.1:
+    resolution: {integrity: sha512-8+yQYeNYqBfWem0Nmm7BUnh27wm+qwGvI0xln60c8RPM5rVekxZf/Ildng2GNBfjaG6utIebFmVBPlNtZlBLxg==}
     engines: {node: '>=12.17.0'}
 
   fast-deep-equal@3.1.3:
@@ -5052,7 +5052,7 @@ snapshots:
       iconv-lite: 0.4.24
       tmp: 0.0.33
 
-  fast-check@4.0.0:
+  fast-check@4.1.1:
     dependencies:
       pure-rand: 7.0.1
 
