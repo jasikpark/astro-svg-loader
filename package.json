@@ -52,7 +52,7 @@
     "prettier": "3.5.3",
     "prettier-plugin-astro": "0.14.1",
     "shiki": "2.5.0",
-    "typescript": "5.8.2",
+    "typescript": "5.8.3",
     "typescript-eslint": "8.28.0",
     "vitest": "3.0.9"
   },
