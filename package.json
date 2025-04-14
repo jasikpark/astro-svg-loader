@@ -65,7 +65,7 @@
   },
   "packageManager": "pnpm@10.8.1",
   "dependencies": {
-    "ultrahtml": "1.5.3"
+    "ultrahtml": "1.6.0"
   },
   "publishConfig": {
     "provenance": true
