@@ -19,8 +19,8 @@ importers:
         specifier: 2.29.1
         version: 2.29.1
       '@eslint/js':
-        specifier: 9.24.0
-        version: 9.24.0
+        specifier: 9.30.1
+        version: 9.30.1
       '@ianvs/prettier-plugin-sort-imports':
         specifier: 4.5.0
         version: 4.5.0(prettier@3.5.3)
@@ -436,8 +436,8 @@ packages:
     resolution: {integrity: sha512-d9zaMRSTIKDLhctzH12MtXvJKSSUhaHcjV+2Z+GK+EEY7XKpP5yR4x+N3TAcHTcu963nIr+TMcCb4DBCYX1z6Q==}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
 
-  '@eslint/js@9.24.0':
-    resolution: {integrity: sha512-uIY/y3z0uvOGX8cp1C2fiC4+ZmBhp6yZWkojtHL1YEMnRt1Y63HB9TM17proGEmeG7HeUY+UP36F0aknKYTpYA==}
+  '@eslint/js@9.30.1':
+    resolution: {integrity: sha512-zXhuECFlyep42KZUhWjfvsmXGX39W8K8LFb8AWXM9gSV9dQB+MrJGLKvW6Zw0Ggnbpw0VHTtrhFXYe3Gym18jg==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
 
   '@humanwhocodes/config-array@0.13.0':
@@ -3721,7 +3721,7 @@ snapshots:
 
   '@eslint/js@8.57.1': {}
 
-  '@eslint/js@9.24.0': {}
+  '@eslint/js@9.30.1': {}
 
   '@humanwhocodes/config-array@0.13.0':
     dependencies:
