@@ -12,4 +12,7 @@
       matchPackageNames: ["prettier"],
     },
   ],
+  npm: {
+    minimumReleaseAge: "3 days"
+  }
 }
