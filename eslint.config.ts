@@ -1,11 +1,10 @@
-// @ts-check
-
 import eslint from "@eslint/js";
 import { configs as astroConfigs } from "eslint-plugin-astro";
 import { configs as typescriptConfigs } from "typescript-eslint";
 import { flatConfigs as importFlatConfigs } from "eslint-plugin-import-x";
 import { createTypeScriptImportResolver } from "eslint-import-resolver-typescript";
 import { defineConfig } from "eslint/config";
+import type { ConfigWithExtends } from "@eslint/config-helpers";
 
 export default defineConfig(
   {
@@ -25,8 +24,8 @@ export default defineConfig(
       "@typescript-eslint/consistent-type-definitions": ["error", "type"],
     },
   },
-  importFlatConfigs.recommended,
-  importFlatConfigs.typescript,
+  importFlatConfigs.recommended as ConfigWithExtends,
+  importFlatConfigs.typescript as ConfigWithExtends,
   {
     settings: {
       "import-x/resolver-next": [createTypeScriptImportResolver()],

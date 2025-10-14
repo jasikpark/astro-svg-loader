@@ -38,6 +38,7 @@
   "devDependencies": {
     "@astrojs/check": "0.9.4",
     "@changesets/cli": "2.29.7",
+    "@eslint/config-helpers": "^0.4.0",
     "@eslint/js": "9.37.0",
     "@ianvs/prettier-plugin-sort-imports": "4.7.0",
     "@types/eslint__js": "8.42.3",
@@ -51,6 +52,7 @@
     "eslint-plugin-import-x": "^4.16.1",
     "eslint-plugin-jsx-a11y": "6.10.2",
     "fast-check": "4.3.0",
+    "jiti": "^2.6.1",
     "prettier": "3.6.2",
     "prettier-plugin-astro": "0.14.1",
     "shiki": "3.13.0",
