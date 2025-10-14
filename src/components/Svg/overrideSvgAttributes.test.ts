@@ -130,7 +130,7 @@ describe("overrideSvgAtrributes", () => {
           // every truthy override should exist in the transformed source
           Object.entries(overrides)
             .filter(([, value]) => {
-              ctx.log(`${value}, ${!!value}`);
+              ctx.log(`${String(value)}, ${String(!!value)}`);
               return !!value;
             })
             .forEach(([override]) => {

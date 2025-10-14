@@ -3,22 +3,18 @@ import type { SVGAttributes } from "../../types";
 import { overrideSvgAttributes } from "./overrideSvgAttributes";
 
 // accepts SVG attributes which will override the ones in the original SVG
-export interface Props extends SVGAttributes {
+export type Props = SVGAttributes & {
   /**  pass an `import("*.svg?raw")` to `Svg` for the svg file to use */
   src: Promise<typeof import("*.svg?raw")>;
-}
+};
 
-const { src, ...attributeOverrides } = Astro.props as Props;
+const { src, ...attributeOverrides } = Astro.props;
 
 const SVG_NOT_FOUND = "Could not find an SVG at the provided `src`";
 const ALT_NOT_ALLOWED =
   "`alt` is not a valid prop for svg, perhaps you mean `aria-label` or `aria-hidden`?";
 
 const svgImport = await src;
-
-if (!svgImport) {
-  throw new Error(SVG_NOT_FOUND);
-}
 
 const svgSource = svgImport.default;
 
