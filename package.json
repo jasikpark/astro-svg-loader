@@ -9,15 +9,8 @@
   "exports": {
     ".": "./index.ts"
   },
-  "files": [
-    "src",
-    "index.ts"
-  ],
-  "keywords": [
-    "astro-component",
-    "svg",
-    "svg-loader"
-  ],
+  "files": ["src", "index.ts"],
+  "keywords": ["astro-component", "svg", "svg-loader"],
   "scripts": {
     "preinstall": "npx only-allow pnpm",
     "dev": "astro dev",
@@ -28,7 +21,7 @@
     "test": "vitest --run",
     "test:watch": "vitest",
     "test:watch:ui": "vitest --ui",
-    "lint": "eslint",
+    "lint": "eslint . --cache --cache-strategy content",
     "check:astro": "astro check",
     "check:ts": "tsc -p .",
     "check": "pnpm run '/^check:.*/'",
