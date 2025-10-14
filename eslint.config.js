@@ -4,8 +4,9 @@ import eslint from "@eslint/js";
 import eslintPluginAstro from "eslint-plugin-astro";
 import tseslint from "typescript-eslint";
 import { flatConfigs as importFlatConfigs } from "eslint-plugin-import";
+import { defineConfig } from "eslint/config";
 
-export default tseslint.config(
+export default defineConfig(
   {
     ignores: ["dist", ".astro/"],
   },
@@ -16,7 +17,6 @@ export default tseslint.config(
     languageOptions: {
       parserOptions: {
         projectService: true,
-        // @ts-expect-error -- dirname is missing on the type :shrug:
         tsconfigRootDir: import.meta.dirname,
       },
     },
@@ -24,6 +24,7 @@ export default tseslint.config(
       "@typescript-eslint/consistent-type-definitions": ["error", "type"],
     },
   },
+  // @ts-expect-error - mismatched config types, but i don't care
   importFlatConfigs.recommended,
   importFlatConfigs.typescript,
   {
