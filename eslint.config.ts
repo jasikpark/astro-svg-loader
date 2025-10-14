@@ -31,5 +31,6 @@ export default defineConfig(
       "import-x/resolver-next": [createTypeScriptImportResolver()],
     },
   },
+  ...astroConfigs.recommended,
   ...astroConfigs["jsx-a11y-recommended"],
 );
