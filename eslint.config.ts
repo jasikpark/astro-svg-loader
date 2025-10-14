@@ -6,6 +6,10 @@ import { createTypeScriptImportResolver } from "eslint-import-resolver-typescrip
 import { defineConfig } from "eslint/config";
 import type { ConfigWithExtends } from "@eslint/config-helpers";
 
+import { fileURLToPath } from "node:url";
+import { dirname } from "node:path";
+const __dirname = dirname(fileURLToPath(import.meta.url));
+
 export default defineConfig(
   {
     ignores: ["dist", ".astro/"],
@@ -17,7 +21,7 @@ export default defineConfig(
     languageOptions: {
       parserOptions: {
         projectService: true,
-        tsconfigRootDir: import.meta.dirname,
+        tsconfigRootDir: __dirname,
       },
     },
     rules: {
