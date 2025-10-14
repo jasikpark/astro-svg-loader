@@ -9,8 +9,15 @@
   "exports": {
     ".": "./index.ts"
   },
-  "files": ["src", "index.ts"],
-  "keywords": ["astro-component", "svg", "svg-loader"],
+  "files": [
+    "src",
+    "index.ts"
+  ],
+  "keywords": [
+    "astro-component",
+    "svg",
+    "svg-loader"
+  ],
   "scripts": {
     "preinstall": "npx only-allow pnpm",
     "dev": "astro dev",
