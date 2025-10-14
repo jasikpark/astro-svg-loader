@@ -1,9 +1,10 @@
 // @ts-check
 
 import eslint from "@eslint/js";
-import eslintPluginAstro from "eslint-plugin-astro";
-import tseslint from "typescript-eslint";
-import { flatConfigs as importFlatConfigs } from "eslint-plugin-import";
+import { configs as astroConfigs } from "eslint-plugin-astro";
+import { configs as typescriptConfigs } from "typescript-eslint";
+import { flatConfigs as importFlatConfigs } from "eslint-plugin-import-x";
+import { createTypeScriptImportResolver } from "eslint-import-resolver-typescript";
 import { defineConfig } from "eslint/config";
 
 export default defineConfig(
@@ -11,8 +12,8 @@ export default defineConfig(
     ignores: ["dist", ".astro/"],
   },
   eslint.configs.recommended,
-  ...tseslint.configs.strictTypeChecked,
-  ...tseslint.configs.stylisticTypeChecked,
+  ...typescriptConfigs.strictTypeChecked,
+  ...typescriptConfigs.stylisticTypeChecked,
   {
     languageOptions: {
       parserOptions: {
@@ -24,15 +25,12 @@ export default defineConfig(
       "@typescript-eslint/consistent-type-definitions": ["error", "type"],
     },
   },
-  // @ts-expect-error - mismatched config types, but i don't care
   importFlatConfigs.recommended,
   importFlatConfigs.typescript,
   {
     settings: {
-      "import/resolver": {
-        typescript: true,
-      },
+      "import-x/resolver-next": [createTypeScriptImportResolver()],
     },
   },
-  ...eslintPluginAstro.configs["jsx-a11y-recommended"],
+  ...astroConfigs["jsx-a11y-recommended"],
 );
