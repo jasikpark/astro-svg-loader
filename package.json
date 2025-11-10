@@ -36,7 +36,7 @@
     "changeset": "changeset"
   },
   "devDependencies": {
-    "@astrojs/check": "0.9.4",
+    "@astrojs/check": "0.9.5",
     "@changesets/cli": "2.29.7",
     "@eslint/config-helpers": "0.4.1",
     "@eslint/js": "9.38.0",
