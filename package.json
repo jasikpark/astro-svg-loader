@@ -36,7 +36,7 @@
     "changeset": "changeset"
   },
   "devDependencies": {
-    "@astrojs/check": "0.9.4",
+    "@astrojs/check": "0.9.6",
     "@changesets/cli": "2.29.7",
     "@eslint/config-helpers": "0.4.1",
     "@eslint/js": "9.38.0",
@@ -44,7 +44,7 @@
     "@types/eslint__js": "8.42.3",
     "@typescript-eslint/parser": "8.48.1",
     "@vitest/ui": "4.0.13",
-    "astro": "5.16.0",
+    "astro": "5.16.6",
     "eslint": "9.38.0",
     "eslint-import-resolver-typescript": "4.4.4",
     "eslint-plugin-astro": "1.5.0",
