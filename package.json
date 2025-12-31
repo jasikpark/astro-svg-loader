@@ -69,7 +69,7 @@
   },
   "packageManager": "pnpm@10.25.0",
   "dependencies": {
-    "ultrahtml": "1.5.3"
+    "ultrahtml": "1.6.0"
   },
   "publishConfig": {
     "provenance": true
